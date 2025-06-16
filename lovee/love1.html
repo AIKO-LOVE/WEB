@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Amor 💖</title>
+    <link rel="stylesheet" href="love.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Para ti, con todo mi cariño...</h1>
+        <div class="corazon" id="corazon"></div>
+        <p id="mensaje" class="oculto">Eres lo más especial en mi vida Ruth❤</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script>
+        const corazon = document.getElementById('corazon');
+        const mensaje = document.getElementById('mensaje');
+        
+        corazon.addEventListener('click', function() {
+            mensaje.classList.toggle('oculto');
+            confetti({
+                particleCount: 120,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#ff0000', '#ff69b4', '#ffebee']
+            });
+        });
+    </script>
+</body>
+</html>
